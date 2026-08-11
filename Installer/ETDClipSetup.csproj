@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>..\Assets\app.ico</ApplicationIcon>
+    <Title>ETDClip Kurulum Sihirbazı</Title>
+    <Authors>Emir Tuğra Dağ</Authors>
+    <Company>Emir Tuğra Dağ</Company>
+    <Copyright>Copyright (c) 2026 Emir Tuğra Dağ</Copyright>
+    <Version>1.0.0</Version>
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- ETDClip.exe is embedded so the setup exe is fully self-contained -->
+    <EmbeddedResource Include="..\publish\ETDClip\ETDClip.exe"
+                      LogicalName="ETDClipSetup.ETDClip.exe"
+                      Link="ETDClip.exe"
+                      Condition="Exists('..\publish\ETDClip\ETDClip.exe')"/>
+    <EmbeddedResource Include="..\Assets\app.ico"         LogicalName="ETDClipSetup.app.ico"          Link="app.ico"/>
+    <EmbeddedResource Include="..\Assets\etdclip_logo.png" LogicalName="ETDClipSetup.etdclip_logo.png" Link="etdclip_logo.png"/>
+  </ItemGroup>
+
+</Project>

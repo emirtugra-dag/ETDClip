@@ -1,0 +1,37 @@
+## Build and Release Outputs
+bin/
+obj/
+out/
+dist/
+publish/
+[D-d]ebug/
+[R-r]elease/
+x64/
+x86/
+build/
+
+## Executables, Archives & Scripts
+*.exe
+*.zip
+*.ps1
+ETDClip_Setup.exe
+
+## User Specific Files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+## Visual Studio Cache / Temp
+.vs/
+.idea/
+*.cache
+
+## ETDClip Data / Cache
+*.log
+history.json
+cache/
+Cache/
+AppCache/

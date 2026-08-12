@@ -88,7 +88,7 @@ namespace ETDClip.Services
             }
         }
 
-        public ClipboardItem AddOrUpdateItem(ClipboardItem newItem, int maxHistoryItems = 10)
+        public ClipboardItem? AddOrUpdateItem(ClipboardItem newItem, int maxHistoryItems = 10)
         {
             lock (_lockObj)
             {
@@ -96,19 +96,9 @@ namespace ETDClip.Services
 
                 if (existingItem != null)
                 {
-                    existingItem.Timestamp = DateTime.Now;
-
-                    if (newItem.IsCached)
-                    {
-                        existingItem.IsCached = true;
-                        existingItem.CachedFilePaths = newItem.CachedFilePaths;
-                    }
-
-                    _items.Remove(existingItem);
-                    _items.Insert(0, existingItem);
-                    SaveHistory();
-                    HistoryUpdated?.Invoke(this, EventArgs.Empty);
-                    return existingItem;
+                    // User requested: "metin aynıysa kopyalamasın. hash değerlerine bak aynıysa alma niye alacan zaten"
+                    // If an identical item is already in history, ignore and do not re-add or bump it.
+                    return null;
                 }
 
                 _items.Insert(0, newItem);
@@ -184,6 +174,13 @@ namespace ETDClip.Services
         private static bool IsDuplicate(ClipboardItem existing, ClipboardItem newItem)
         {
             if (existing.Type != newItem.Type) return false;
+
+            string hash1 = existing.ComputeContentHash();
+            string hash2 = newItem.ComputeContentHash();
+            if (!string.IsNullOrEmpty(hash1) && string.Equals(hash1, hash2, StringComparison.OrdinalIgnoreCase))
+            {
+                return true;
+            }
 
             return existing.Type switch
             {

@@ -5,8 +5,37 @@ namespace ETDClip.Services
 {
     public static class Win32Api
     {
-        // Clipboard
+        // Native Clipboard
         public const int WM_CLIPBOARDUPDATE = 0x031D;
+        public const uint CF_TEXT = 1;
+        public const uint CF_BITMAP = 2;
+        public const uint CF_DIB = 8;
+        public const uint CF_UNICODETEXT = 13;
+        public const uint CF_HDROP = 15;
+        public const uint CF_DIBV5 = 17;
+
+        [DllImport("user32.dll", SetLastError = true)]
+        public static extern bool OpenClipboard(IntPtr hWndNewOwner);
+
+        [DllImport("user32.dll", SetLastError = true)]
+        public static extern bool CloseClipboard();
+
+        [DllImport("user32.dll", SetLastError = true)]
+        public static extern IntPtr GetClipboardData(uint uFormat);
+
+        [DllImport("user32.dll", SetLastError = true)]
+        public static extern bool IsClipboardFormatAvailable(uint format);
+
+        // Global Memory
+        [DllImport("kernel32.dll", SetLastError = true)]
+        public static extern IntPtr GlobalLock(IntPtr hMem);
+
+        [DllImport("kernel32.dll", SetLastError = true)]
+        public static extern bool GlobalUnlock(IntPtr hMem);
+
+        [DllImport("kernel32.dll", SetLastError = true)]
+        public static extern UIntPtr GlobalSize(IntPtr hMem);
+
         [DllImport("user32.dll", SetLastError = true)]
         public static extern bool AddClipboardFormatListener(IntPtr hwnd);
         [DllImport("user32.dll", SetLastError = true)]
@@ -28,6 +57,10 @@ namespace ETDClip.Services
         // Window management
         [DllImport("user32.dll")]
         public static extern bool SetForegroundWindow(IntPtr hWnd);
+
+        // GDI
+        [DllImport("gdi32.dll", SetLastError = true)]
+        public static extern bool DeleteObject(IntPtr hObject);
 
         // Memory trimming
         [DllImport("psapi.dll")]

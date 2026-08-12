@@ -24,6 +24,42 @@ namespace ETDClip.Models
         public bool IsPinned { get; set; }
         public bool IsCached { get; set; }
         public long TotalSizeBytes { get; set; }
+        public string ContentHash { get; set; } = string.Empty;
+
+        public string ComputeContentHash()
+        {
+            if (!string.IsNullOrEmpty(ContentHash)) return ContentHash;
+
+            using var sha = System.Security.Cryptography.SHA256.Create();
+            string raw = string.Empty;
+            switch (Type)
+            {
+                case ClipboardItemType.Text:
+                    raw = "TEXT:" + TextContent.Trim();
+                    break;
+                case ClipboardItemType.Image:
+                    if (!string.IsNullOrEmpty(ImagePath) && File.Exists(ImagePath))
+                    {
+                        try
+                        {
+                            byte[] bytes = File.ReadAllBytes(ImagePath);
+                            byte[] hashBytes = sha.ComputeHash(bytes);
+                            ContentHash = Convert.ToHexString(hashBytes);
+                            return ContentHash;
+                        }
+                        catch { }
+                    }
+                    raw = $"IMAGE:{TotalSizeBytes}";
+                    break;
+                case ClipboardItemType.File:
+                    raw = "FILE:" + string.Join("|", FilePaths.OrderBy(f => f)) + ":" + TotalSizeBytes;
+                    break;
+            }
+
+            byte[] b = sha.ComputeHash(System.Text.Encoding.UTF8.GetBytes(raw));
+            ContentHash = Convert.ToHexString(b);
+            return ContentHash;
+        }
 
         public string FormattedTime => Timestamp.ToString("HH:mm:ss - dd.MM.yyyy");
 

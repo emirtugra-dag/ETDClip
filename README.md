@@ -1,6 +1,6 @@
 <p align="center">
   <img src="Assets/etdclip_logo.png" width="180" alt="ETDClip Logo"/><br/><br/>
-  <b>ETDClip</b> — Modern Transparent Clipboard Manager for Windows<br/>
+  <b>ETDClip</b> — Modern  Clipboard Manager for Windows<br/>
   <sub>Created by Emir Tuğra Dağ • Built with Gemini 3.6 Flash on Google Antigravity</sub>
 </p>
 
@@ -15,7 +15,7 @@
 ## 🇹🇷 Türkçe
 
 ### Genel Bakış
-ETDClip, Windows işletim sistemi için geliştirilmiş şeffaf ve modern arayüze, akıllı mükerrer kopyalama korumasına, silinmeye karşı önbellekleme sistemine ve aşırı düşük bellek kullanımına sahip modern bir pano yöneticisidir.
+ETDClip, Windows işletim sistemi için geliştirilmiş modern arayüze, akıllı mükerrer kopyalama korumasına, silinmeye karşı önbellekleme sistemine ve aşırı düşük bellek kullanımına sahip modern bir pano yöneticisidir.
 
 ### Öne Çıkan Özellikler
 - **Modern ve Şeffaf Arayüz**: Yarı şeffaf paneller ve modern, minimalist tasarım.
@@ -56,7 +56,7 @@ Hazır derlenmiş kurulum dosyasını indirip çalıştırabilirsiniz:
 ## 🇬🇧 English
 
 ### Overview
-ETDClip is a high-performance, transparent and modern Clipboard Manager for Windows designed for simplicity, smart deduplication, offline privacy, and ultra-low background memory footprint.
+ETDClip is a high-performance and modern Clipboard Manager for Windows designed for simplicity, smart deduplication, offline privacy, and ultra-low background memory footprint.
 
 ### Key Features
 - **Modern & Transparent UI**: Translucent slate panels with a modern, clean, minimalist layout.

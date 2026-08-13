@@ -1,6 +1,12 @@
-MIT License
+ETDClip LICENSE & TERMS OF USE
 
 Copyright (c) 2026 Emir Tuğra Dağ
+
+This project is licensed under a combined license separating the Software Source Code from the Brand, Logo, and Trademark assets.
+
+--------------------------------------------------------------------------------
+1. SOFTWARE SOURCE CODE LICENSE (MIT License)
+--------------------------------------------------------------------------------
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -20,16 +26,30 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
----
+--------------------------------------------------------------------------------
+2. BRAND, LOGO, AND TRADEMARK POLICY (All Rights Reserved / Tüm Hakları Saklıdır)
+--------------------------------------------------------------------------------
 
-### 🎨 Graphic Assets & Name Use Restrictions
+[EN]
+The permission granted under Section 1 (Software Source Code License) applies ONLY to the source code of the Software. 
 
-**English:**  
-The source code, scripts, and underlying logic of ETDClip are licensed under the MIT License above. However, the name **"ETDClip"**, logo artwork (`Assets/etdclip_logo.png`), application icons (`Assets/app.ico`), and custom graphics are copyrighted visual assets of **Emir Tuğra Dağ**. 
+It does NOT grant any rights, implied or otherwise, to use the product name "ETDClip", the application logo/icon (including Assets/etdclip_logo.png, Assets/app.ico, or any visual design assets), or the visual branding and identity of the project.
 
-These visual assets are **explicitly excluded** from the MIT License. You may freely fork, modify, and redistribute the source code, but you must remove or replace the project name, logos, and application icons in derivative works.
+The name "ETDClip", the official logo/icon, and all visual branding assets are the exclusive intellectual property of Emir Tuğra Dağ and are protected under trademark and unfair competition laws. All Rights Reserved. You may not copy, modify, distribute, or use the logo, name, or branding assets in any derivative work or separate application without express prior written permission from Emir Tuğra Dağ.
 
-**Türkçe:**  
-ETDClip yazılımının kaynak kodları ve altyapısı yukarıdaki MIT Lisansı kapsamındadır. Ancak **"ETDClip"** ismi, logo görselleri (`Assets/etdclip_logo.png`), uygulama simgeleri (`Assets/app.ico`) ve projeye ait özel grafikler **Emir Tuğra Dağ**'ın telif hakkı altındaki görsel varlıklarıdır. 
+[TR]
+Bölüm 1 (Yazılım Kaynak Kod Lisansı) kapsamında verilen izinler YALNIZCA yazılımın kaynak kodları için geçerlidir.
 
-Bu görseller ve isim, MIT Lisansı kapsamının **açıkça dışındadır**. Kodları dilediğiniz gibi çatallayabilir (fork) ve değiştirebilirsiniz; ancak türev projelerinizde proje ismini, logoları ve uygulama simgelerini değiştirmeniz / kaldırmanız gerekmektedir.
+Bu lisans, "ETDClip" ürün ismini, uygulama logosunu/ikonunu (Assets/etdclip_logo.png, Assets/app.ico ve diğer tüm görsel tasarım ögeleri dahil) veya projenin görsel marka kimliğini kullanma hakkı VERMEZ.
+
+"ETDClip" ismi, resmi logo/ikon ve tüm görsel marka ögeleri tamamen Emir Tuğra Dağ'ın mülkiyetindedir ve telif hakkı ile haksız rekabet kanunları kapsamında korunmaktadır. Tüm Hakları Saklıdır. Emir Tuğra Dağ'ın önceden verilmiş yazılı izni olmaksızın logonun, ismin veya marka ögelerinin kopyalanması, değiştirilmesi, dağıtılması veya başka bir yazılımda/türetilmiş çalışmada kullanılması kesinlikle yasaktır.
+
+--------------------------------------------------------------------------------
+3. ABSOLUTE DISCLAIMER OF LIABILITY (EKSİKSİZ SORUMLULUK REDDİ)
+--------------------------------------------------------------------------------
+
+[EN]
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR (EMİR TUĞRA DAĞ) "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, DATA LOSS, SYSTEM INSTABILITY, HARDWARE DAMAGE, OR BUSINESS INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE. ALL RISKS BELONG ENTIRELY TO THE USER.
+
+[TR]
+BU YAZILIM GELİŞTİRİCİ (EMİR TUĞRA DAĞ) TARAFINDAN "OLDUĞU GİBİ" (AS IS) SUNULMAKTADIR. YAZILIMIN KULLANIMINDAN VEYA KULLANILAMAMASINDAN, SİSTEM AKSAKLIKLARINDAN, VERİ KAYIPLARINDAN VEYA OLUŞABİLECEK HERHANGİ BİR DOĞRUDAN/DOLAYLI ZARARDAN GELİŞTİRİCİ (EMİR TUĞRA DAĞ) HİÇBİR KOŞULDA YASAL VEYA HUKUKİ OLARAK SORUMLU TUTULAMAZ. TÜM KULLANIM VE RİSK TAMAMEN KULLANICIYA AİTTİR. GELİŞTİRİCİNİN YAZILIMA GÜNCELLEME VEYA TEKNİK DESTEK SAĞLAMA ZORUNLULUĞU YOKTUR.

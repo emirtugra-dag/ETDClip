@@ -270,7 +270,7 @@ namespace ETDClip
 
         public void ToggleWindowVisibility()
         {
-            if (IsVisible && IsActive)
+            if (IsVisible)
             {
                 HideWindowToTray();
             }
@@ -279,16 +279,8 @@ namespace ETDClip
                 _historyManager.ValidateAndPurgeMissingFiles(_cacheManager);
 
                 Topmost = true;
-                if (!IsVisible)
-                {
-                    Show();
-                }
-
-                if (WindowState == WindowState.Minimized)
-                {
-                    WindowState = WindowState.Normal;
-                }
-
+                Show();
+                WindowState = WindowState.Normal;
                 Activate();
                 Focus();
 

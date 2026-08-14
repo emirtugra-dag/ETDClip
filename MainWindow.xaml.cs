@@ -343,7 +343,12 @@ namespace ETDClip
                 if (CmbTheme.Items[2] is ComboBoxItem itemLight)  itemLight.Content  = LocalizationManager.GetString("ThemeLight",  lang);
             }
             if (TxtSaveSettingsLabel != null) TxtSaveSettingsLabel.Text = LocalizationManager.GetString("SaveSettings", lang);
-            if (TxtAuthorLicense  != null) TxtAuthorLicense.Text  = LocalizationManager.GetString("AuthorLicense",  lang);
+            if (TxtAuthorLicense  != null)
+            {
+                string ver = Assembly.GetExecutingAssembly().GetName().Version?.ToString(3) ?? "1.0.2";
+                string authorLicense = LocalizationManager.GetString("AuthorLicense", lang);
+                TxtAuthorLicense.Text = $"ETDClip v{ver}  •  {authorLicense}";
+            }
         }
 
         // ─── HISTORY RENDERING ────────────────────────────────────────────────

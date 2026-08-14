@@ -273,11 +273,12 @@ namespace ETDClipSetup
                 AutoSize  = true
             });
 
+            string ver = Assembly.GetExecutingAssembly().GetName().Version?.ToString(3) ?? "1.0.2";
             string versionLine = TR(
-                _isUpdate ? "Güncelleme  •  v1.0.1  •  Emir Tuğra Dağ"
-                           : "Yeni Kurulum  •  v1.0.1  •  Emir Tuğra Dağ",
-                _isUpdate ? "Update  •  v1.0.1  •  Emir Tuğra Dağ"
-                           : "New Install  •  v1.0.1  •  Emir Tuğra Dağ");
+                _isUpdate ? $"Güncelleme  •  v{ver}  •  Emir Tuğra Dağ"
+                           : $"Yeni Kurulum  •  v{ver}  •  Emir Tuğra Dağ",
+                _isUpdate ? $"Update  •  v{ver}  •  Emir Tuğra Dağ"
+                           : $"New Install  •  v{ver}  •  Emir Tuğra Dağ");
 
             header.Controls.Add(new Label
             {
@@ -663,8 +664,9 @@ namespace ETDClipSetup
                 @"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\ETDClip");
             if (uninstKey != null)
             {
+                string ver = Assembly.GetExecutingAssembly().GetName().Version?.ToString(3) ?? "1.0.2";
                 uninstKey.SetValue("DisplayName",     "ETDClip");
-                uninstKey.SetValue("DisplayVersion",  "1.0.1");
+                uninstKey.SetValue("DisplayVersion",  ver);
                 uninstKey.SetValue("Publisher",       "Emir Tuğra Dağ");
                 uninstKey.SetValue("InstallLocation", installDir);
                 uninstKey.SetValue("UninstallString", $"\"{appExe}\" --uninstall");

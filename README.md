@@ -10,6 +10,17 @@
   <a href="https://github.com/emirtugra-dag/ETDClip/releases/download/v1.0.2/ETDClipSetup.exe"><b>📥 Download Setup (.exe)</b></a>
 </p>
 
+<p align="center">
+  <img src="Assets/screenshots/main_dark.png" alt="ETDClip Dark Theme" width="31%" />
+  &nbsp;
+  <img src="Assets/screenshots/main_light.png" alt="ETDClip Light Theme" width="31%" />
+  &nbsp;
+  <img src="Assets/screenshots/settings.png" alt="ETDClip Settings Modal" width="31%" />
+</p>
+<p align="center">
+  <sub><i>Koyu Tema (Dark Mode) &nbsp;•&nbsp; Açık Tema (Light Mode) &nbsp;•&nbsp; Ayarlar Paneli (Settings Modal)</i></sub>
+</p>
+
 ---
 
 ## 🇹🇷 Türkçe

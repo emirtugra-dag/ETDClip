@@ -11,7 +11,7 @@
     <Authors>Emir Tuğra Dağ</Authors>
     <Company>Emir Tuğra Dağ</Company>
     <Copyright>Copyright (c) 2026 Emir Tuğra Dağ</Copyright>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <PublishSingleFile>true</PublishSingleFile>
     <SelfContained>true</SelfContained>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>

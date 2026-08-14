@@ -43,7 +43,14 @@ namespace ETDClip.Services
         {
             if (_hwndSource == null) return false;
             Win32Api.UnregisterHotKey(_hwndSource.Handle, id);
+            
+            // Try with MOD_NOREPEAT first, and fallback to plain modifiers if needed
             bool ok = Win32Api.RegisterHotKey(_hwndSource.Handle, id, modifiers | Win32Api.MOD_NOREPEAT, vk);
+            if (!ok)
+            {
+                ok = Win32Api.RegisterHotKey(_hwndSource.Handle, id, modifiers, vk);
+            }
+            
             if (ok) _hotkeyCallbacks[id] = callback;
             return ok;
         }

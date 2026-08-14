@@ -226,10 +226,18 @@ namespace ETDClip
         {
             if (Current.MainWindow is MainWindow mainWindow)
             {
-                mainWindow.Show();
+                mainWindow.Topmost = true;
+                if (!mainWindow.IsVisible) mainWindow.Show();
                 mainWindow.WindowState = WindowState.Normal;
                 mainWindow.Activate();
-                Win32Api.SetForegroundWindow(new System.Windows.Interop.WindowInteropHelper(mainWindow).Handle);
+                mainWindow.Focus();
+
+                var handle = new System.Windows.Interop.WindowInteropHelper(mainWindow).EnsureHandle();
+                Win32Api.ShowWindow(handle, Win32Api.SW_RESTORE);
+                Win32Api.BringWindowToTop(handle);
+                Win32Api.SetForegroundWindow(handle);
+
+                mainWindow.Topmost = true;
             }
         }
 

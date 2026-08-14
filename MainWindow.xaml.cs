@@ -270,17 +270,35 @@ namespace ETDClip
 
         public void ToggleWindowVisibility()
         {
-            if (IsVisible)
+            if (IsVisible && IsActive)
             {
                 HideWindowToTray();
             }
             else
             {
                 _historyManager.ValidateAndPurgeMissingFiles(_cacheManager);
-                Show();
-                WindowState = WindowState.Normal;
+
+                Topmost = true;
+                if (!IsVisible)
+                {
+                    Show();
+                }
+
+                if (WindowState == WindowState.Minimized)
+                {
+                    WindowState = WindowState.Normal;
+                }
+
                 Activate();
-                Win32Api.SetForegroundWindow(new WindowInteropHelper(this).Handle);
+                Focus();
+
+                var handle = new WindowInteropHelper(this).EnsureHandle();
+                Win32Api.ShowWindow(handle, Win32Api.SW_RESTORE);
+                Win32Api.BringWindowToTop(handle);
+                Win32Api.SetForegroundWindow(handle);
+
+                Topmost = true;
+
                 RenderHistoryItems();
             }
         }

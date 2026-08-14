@@ -497,7 +497,7 @@
                             </Button>
 
                             <TextBlock x:Name="TxtAuthorLicense"
-                                       Text="ETDClip v1.0.0-alpha.1   Emir Tuğra Dağ   MIT Lisansı"
+                                       Text="ETDClip v1.0.1   Emir Tuğra Dağ   MIT Lisansı"
                                        FontSize="10" Foreground="#64748B"
                                        HorizontalAlignment="Center" Margin="0,14,0,0"
                                        TextAlignment="Center"/>

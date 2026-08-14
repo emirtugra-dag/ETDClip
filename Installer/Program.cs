@@ -274,10 +274,10 @@ namespace ETDClipSetup
             });
 
             string versionLine = TR(
-                _isUpdate ? "Guncelleme  •  v1.0.0-alpha.1  •  Emir Tugra Dag"
-                           : "Yeni Kurulum  •  v1.0.0-alpha.1  •  Emir Tugra Dag",
-                _isUpdate ? "Update  •  v1.0.0-alpha.1  •  Emir Tugra Dag"
-                           : "New Install  •  v1.0.0-alpha.1  •  Emir Tugra Dag");
+                _isUpdate ? "Güncelleme  •  v1.0.1  •  Emir Tuğra Dağ"
+                           : "Yeni Kurulum  •  v1.0.1  •  Emir Tuğra Dağ",
+                _isUpdate ? "Update  •  v1.0.1  •  Emir Tuğra Dağ"
+                           : "New Install  •  v1.0.1  •  Emir Tuğra Dağ");
 
             header.Controls.Add(new Label
             {
@@ -664,8 +664,8 @@ namespace ETDClipSetup
             if (uninstKey != null)
             {
                 uninstKey.SetValue("DisplayName",     "ETDClip");
-                uninstKey.SetValue("DisplayVersion",  "1.0.0-alpha.1");
-                uninstKey.SetValue("Publisher",       "Emir Tugra Dag");
+                uninstKey.SetValue("DisplayVersion",  "1.0.1");
+                uninstKey.SetValue("Publisher",       "Emir Tuğra Dağ");
                 uninstKey.SetValue("InstallLocation", installDir);
                 uninstKey.SetValue("UninstallString", $"\"{appExe}\" --uninstall");
                 uninstKey.SetValue("DisplayIcon",     $"{appExe},0");

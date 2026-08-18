@@ -7,7 +7,7 @@
 <p align="center">
   <a href="#-türkçe"><b>🇹🇷 Türkçe</b></a> &nbsp;|&nbsp; 
   <a href="#-english"><b>🇬🇧 English</b></a> &nbsp;|&nbsp; 
-  <a href="https://github.com/emirtugra-dag/ETDClip/releases/download/v1.0.2/ETDClipSetup.exe"><b>📥 Download Setup (.exe)</b></a>
+  <a href="https://github.com/emirtugra-dag/ETDClip/releases/download/v1.0.3/ETDClipSetup.exe"><b>📥 Download Setup (.exe)</b></a>
 </p>
 
 <p align="center">
@@ -39,7 +39,7 @@ ETDClip, Windows işletim sistemi için geliştirilmiş modern arayüze, akıll�
 
 ### Kurulum
 Hazır derlenmiş kurulum dosyasını indirip çalıştırabilirsiniz:  
-👉 **[ETDClipSetup.exe İndir](https://github.com/emirtugra-dag/ETDClip/releases/download/v1.0.2/ETDClipSetup.exe)**
+👉 **[ETDClipSetup.exe İndir](https://github.com/emirtugra-dag/ETDClip/releases/download/v1.0.3/ETDClipSetup.exe)**
 
 ### Sistem Gereksinimleri
 - **İşletim Sistemi**: Windows 10 (Sürüm 1809+) veya Windows 11 (64-bit)
@@ -80,7 +80,7 @@ ETDClip is a high-performance and modern Clipboard Manager for Windows designed 
 
 ### Download & Installation
 Download the pre-compiled setup installer:  
-👉 **[Download ETDClipSetup.exe](https://github.com/emirtugra-dag/ETDClip/releases/download/v1.0.2/ETDClipSetup.exe)**
+👉 **[Download ETDClipSetup.exe](https://github.com/emirtugra-dag/ETDClip/releases/download/v1.0.3/ETDClipSetup.exe)**
 
 ### System Requirements
 - **OS**: Windows 10 (Build 1809+) or Windows 11 (64-bit)

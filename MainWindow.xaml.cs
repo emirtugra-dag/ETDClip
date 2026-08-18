@@ -61,23 +61,45 @@ namespace ETDClip
 
             InitializeComponent();
             _isInitialized = true;
+
+            // Immediately create Win32 HWND and attach clipboard & hotkey hooks
+            // so the app monitors clipboard and responds to Alt+V right from Windows boot
+            InitializeHandleAndHooks();
+            LoadAssetsSafely();
+            ApplyThemeMode();
+            ApplyLocalization();
         }
 
-        // SourceInitialized fires AFTER the HWND is created but BEFORE Loaded —
-        // perfect for attaching clipboard and hotkey listeners.
-        private void Window_SourceInitialized(object sender, EventArgs e)
-        {
-            _messageSink.Attach(this);
-            RegisterCurrentHotkey();
+        private bool _isHooked = false;
 
-            // Hook for system settings changes (theme changes)
+        public void InitializeHandleAndHooks()
+        {
+            if (_isHooked) return;
+
             try
             {
                 var helper = new System.Windows.Interop.WindowInteropHelper(this);
-                var hwndSource = System.Windows.Interop.HwndSource.FromHwnd(helper.Handle);
+                var handle = helper.EnsureHandle();
+
+                _messageSink.Attach(this);
+                RegisterCurrentHotkey();
+
+                // Hook for system settings changes (theme changes)
+                var hwndSource = System.Windows.Interop.HwndSource.FromHwnd(handle);
                 hwndSource?.AddHook(HwndSourceHook);
+
+                _isHooked = true;
             }
-            catch { }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"InitializeHandleAndHooks error: {ex.Message}");
+            }
+        }
+
+        // SourceInitialized fires when HWND is ready
+        private void Window_SourceInitialized(object sender, EventArgs e)
+        {
+            InitializeHandleAndHooks();
         }
 
         private IntPtr HwndSourceHook(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)

@@ -66,6 +66,9 @@ namespace ETDClip
             var mainWindow = new MainWindow(_settings);
             Current.MainWindow = mainWindow;
 
+            // Ensure HWND and hooks are initialized immediately
+            mainWindow.InitializeHandleAndHooks();
+
             SetupTrayIcon();
 
             bool isAutoStart    = e.Args.Any(a => a.Equals("--autostart",    StringComparison.OrdinalIgnoreCase));
@@ -78,6 +81,7 @@ namespace ETDClip
             }
             else
             {
+                mainWindow.Hide();
                 Win32Api.TrimProcessMemory();
             }
 
